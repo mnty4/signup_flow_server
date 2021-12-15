@@ -29,9 +29,8 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
-app.use(express.static('public'));
-// app.use('/static', express.static('./static/'))
-// app.use(express.static(path.join(__dirname, '/public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.get('*', (req, res) => res.sendFile('index.html', {root: path.join(__dirname, 'public')}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
