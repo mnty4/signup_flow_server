@@ -1,7 +1,7 @@
 # signup_flow_server
 
 To run this project
-* Clone the repo
+* clone the repo
 * in the root directory, run 'npm i'
 * ensure a mongodb instance is running, and create a .env file in the root dir with the following env variables:
   * MONGODB_URI for the mongodb URI string to connect to your instance.
