@@ -7,8 +7,8 @@ var logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI).catch(err => console.error(err));
-
+mongoose.connect(process.env.MONGODB_URI).catch(err => console.error('hiii', err));
+console.log(process.env.MONGODB_URI);
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
